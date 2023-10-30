@@ -1,0 +1,33 @@
+body{
+    background-color: antiquewhite;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+img {
+width: 60%;
+margin:1.8% 20% ;
+transition-property: width margin ;
+transition-duration: 2s;
+transition-delay: 0.1s;
+
+}
+
+.scale-up-ver-center{
+    -webkit-animation:scale-up-ver-center 0.8s steps(30,end) backwards;animation:scale-up-ver-center 1s steps(25,end) backwards
+}
+
+
+ @-webkit-keyframes scale-up-ver-center{0%{-webkit-transform:scaleY(.4);transform:scaleY(.4)}100%{-webkit-transform:scaleY(1);transform:scaleY(1)}}@keyframes scale-up-ver-center{0%{-webkit-transform:scaleY(.4);transform:scaleY(.4)}100%{-webkit-transform:scaleY(1);transform:scaleY(1)}}
+
+ img:hover{
+    width: 70%;
+    margin: 0 15%;
+    
+ }
+
+ img:active{
+    width: 120%;
+    margin: 0 -25%;
+    
+ }
