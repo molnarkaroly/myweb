@@ -1,11 +1,19 @@
 body, html {
-  height: 84%;
+  height: 85%;
 }
 
 
-/* {
-  box-sizing: border-box;
-} */
+
+.buttons {
+	padding-bottom: 7%;
+}
+
+@media (max-width: 1200px) {
+	.buttons{
+		padding-bottom: 25%;
+	}
+}
+
 
 .bg-image {
   /* The image used */
@@ -24,67 +32,54 @@ body, html {
   background-size: cover;
 }
 
+.profimg{
+	border-radius: 70%;
+	height: 350px;
+	transform: translate(-50%, -250%);
+	text-align: center;
+	top: 102%;
+	left: 50%;
+	position: absolute;
+	transition: all 600ms ease-in-out;
+	z-index: 3;
+	}
+
 .profimg:hover{
 	filter:grayscale(100%);
+	border-radius: 25%;
+
 }
+
+
+
 
 /* Position text in the middle of the page/image */
 .bg-text {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-weight: bold;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
   padding: 20px;
   text-align: center;
   font-size: 25px;
+  transition: all 600ms ease-in-out;
 }
 
 .bg-text:hover{
-  filter: blur(1px);
-  -webkit-filter: blur(1px);
+  filter: blur(2px);
+  transform: scale(1.2) translate(-40%, -40%);
 }
 
 
-
-.profimg{
-border-radius: 90%;
-height: 350px;
-transform: translate(-50%, -250%);
-text-align: center;
-top: 100%;
-left: 50%;
-position: absolute;
-}
-
-@media screen and (min-width: 0px){
-	.profimg{
-	  height: 350px;
-	  padding-top: 10px;
-	  transform: translate(-50%, -250%);
-
-	}
-  }
-  
-
-
-  @media screen and (max-width: 700px){
-	.profimg{
-	  height: 300px;
-	  padding-top: 10px;
-	  transform: translate(-50%, -245%);
-
-	}
-  }
 
 .Vero {
-	box-shadow: -1px 0px 45px -9px #000000;
-	background:linear-gradient(to bottom, #06a8b4 5%, #04131b 100%);
-	background-color:#06a8b4;
+	box-shadow: -1px 5px 45px -10px rgba(0, 255, 255, 0.459);
+	transform: scale(0);
 	border-radius:17px;
-	border:1px solid #000000;
+	border:1px solid #0000007a;
 	cursor:move;
 	color:#ffffff;
 	font-family:Arial;
@@ -92,27 +87,38 @@ position: absolute;
 	font-weight:bold;
 	padding: 15px 110px;
 	text-decoration:none;
-  transform: translate(-60%, -250%);
-  text-align: center;
-  top: 96%;
-  left: 50%;
-  position: absolute;
+  	transform: translate(-60%, -250%);
+  	text-align: center;
+  	top: 96%;
+  	left: 50%;
+  	position: absolute;
+  	z-index: 2;
+	background: linear-gradient(300deg, #00cccc, #000000, #0cc);
+	background-size: 600% 600%;
+	background-position:10% 38%;
+	transition: all 800ms ease-in-out;
+
 }
+
+
 .Vero:hover {
-	background:linear-gradient(to bottom, #04131b 5%, #06a8b4 100%);
 	background-color:#04131b;
-  filter: blur(1px);
-  -webkit-filter: blur(1px);
-  cursor: auto;
+  	cursor: auto;
+	background: linear-gradient(300deg, #00cccc, #000000, #0cc);
+	background-size: 600% 600%;
+	background-position:100% 63%;
+	box-shadow: -10px 5px 55px 10px rgba(0, 255, 255, 0.356);
+	border-radius:17px 45px 17px 45px;
+
+
 }
 
 
 .Instagram {
-	box-shadow: -1px 0px 45px -9px #000000;
-	background:linear-gradient(to bottom, #ff0088 5%, #ff9500 100%);
-	background-color:#ff0088;
+	box-shadow: -1px 5px 45px -10px #fd00a9;
+	background:radial-gradient(at bottom center, #ae00ff 10%, #ff0800 100%);
 	border-radius:17px;
-	border:1px solid #000000;
+	border:1px solid #0000007a;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -121,28 +127,34 @@ position: absolute;
 	font-weight:bold;
 	padding:14px 76px;
 	text-decoration:none;
-  transform: translate(-60%, -130%);
-  text-align: center;
-  top: 100%;
-  left: 50%;
-  position: absolute;
+  	transform: translate(-60%, -130%);
+  	text-align: center;
+  	top: 100%;
+  	left: 50%;
+  	position: absolute;
+	transition: all 600ms ease-in-out;
+	background-size: 200% 200%;
+	background-position:10% 50%;
+
 }
 .Instagram:hover {
-	background:linear-gradient(to bottom, #ff9500 5%, #ff0088 100%);
-	background-color:#ff9500;
-  filter: blur(1px);
-  -webkit-filter: blur(1px);
-  cursor: auto;
+	background:radial-gradient(at top  center,  #ae00ff 10%, #ff0800 100%);
+  	cursor: auto;
+	  background-size: 600% 600%;
+	  background-position:100% 63%;
+	  box-shadow: -10px 5px 55px 10px rgba(0, 255, 255, 0.356);
+	  border-radius:17px 45px 17px 45px;
+
 
 }
 
 
 .tiktok {
-	box-shadow: -1px 0px 45px -9px #000000;
-	background:linear-gradient(to bottom, #000000 5%, #990303 100%);
+	box-shadow: 1px 0px 45px -9px #000000a1;
+	background: linear-gradient(300deg, #0026ff, #000, rgb(255, 0, 0));
 	background-color:#000000;
 	border-radius:17px;
-	border:1px solid #000000;
+	border:1px solid #0000007a;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -151,26 +163,29 @@ position: absolute;
 	font-weight:bold;
 	padding:14px 100px;
 	text-decoration:none;
-  transform: translate(-60%, 60%);
-  text-align: center;
-  top: 100%;
-  left: 50%;
-  position: absolute;
+ 	transform: translate(-60%, 60%);
+  	text-align: center;
+  	top: 100%;
+  	left: 50%;
+  	position: absolute;
+  	background-size: 600% 600%;
+	background-position:10% 38%;
+	transition: all 800ms ease-in-out;
 }
 
 .tiktok:hover {
-	background:linear-gradient(to bottom, #1f0399 5%, #000000 100%);
-	background-color:#300399;
-  filter: blur(1px);
-  -webkit-filter: blur(1px);
-  cursor: auto;
+  	cursor: auto;
+	  background: linear-gradient(300deg, #0026ff, #000, rgb(255, 0, 0));
+	  background-size: 600% 600%;
+	  background-position:100% 63%;
+	  box-shadow: -10px 5px 55px 10px rgba(0, 0, 0, 0.589);
+	  border-radius:17px 45px 17px 45px;
 
 }
 
 .snap {
-	box-shadow: -1px 0px 45px -9px #000000;
-	background:linear-gradient(to bottom, #ffff00 5%, #d5d900 100%);
-	background-color:#ffff00;
+	box-shadow: -1px 0px 45px -9px #6c8000;
+	background:linear-gradient(300deg, #ffff00 , #7c7e00, #ffff00 );
 	border-radius:17px;
 	border:1px solid #000000;
 	display:inline-block;
@@ -186,19 +201,25 @@ position: absolute;
   top: 100%;
   left: 50%;
   position: absolute;
+  background-size: 600% 600%;
+	background-position:10% 38%;
+	transition: all 800ms ease-in-out;
+	color: #000000a6;
 }
 .snap:hover {
-	background:linear-gradient(to bottom, #d5d900 5%, #a38d0f 100%);
-	background-color:#fbff00;
-  filter: blur(1px);
-  -webkit-filter: blur(1px);
-  cursor: auto;
+	background:linear-gradient(300deg,#ffff00 , #7c7e00, #ffff00);
+  	cursor: auto;
+	background-size: 600% 600%;
+	background-position:100% 63%;
+	box-shadow: -10px 5px 55px 10px rgba(224, 228, 0, 0.589);
+	border-radius:17px 45px 17px 45px;
+	color: #000;
 
 }
 
 .pinterest {
-	box-shadow: -1px 0px 45px -9px #000000;
-	background:linear-gradient(to bottom, #ff0000 5%, #c20000 100%);
+	box-shadow: -1px 0px 45px -9px rgba(153, 7, 7, 0.747);
+	background: linear-gradient(300deg, #ffffff, #000, rgb(255, 0, 0));
 	background-color:#ff0000;
 	border-radius:17px;
 	border:1px solid #000000;
@@ -215,19 +236,74 @@ position: absolute;
   top: 100%;
   left: 50%;
   position: absolute;
+  background-size: 600% 600%;
+  background-position:10% 38%;
+  transition: all 800ms ease-in-out;
+  color: white;
 }
 .pinterest:hover {
-	background:linear-gradient(to bottom, #c20000 5%, #ff0000 100%);
-	background-color:#c20000;
-  filter: blur(1px);
-  -webkit-filter: blur(1px);
-  cursor: auto;
+	background: linear-gradient(300deg, #ffffff, #000, rgb(255, 0, 0));
+	background-size: 600% 600%;
+	background-position:100% 63%;
+	box-shadow: -10px 5px 55px 10px rgba(153, 7, 7, 0.589);
+	border-radius:17px 45px 17px 45px;
+	cursor: auto;
+	color: black;
+
+
+
+}
+
+
+.github {
+	box-shadow: -1px 0px 45px -9px rgba(153, 7, 7, 0.747);
+	background: linear-gradient(300deg, #0d1117, #6e5494, #161b22 );
+	background-color:#ff0000;
+	border-radius:17px;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:28px;
+	font-weight:bold;
+	padding:14px 83px;
+	padding-left: 100px;
+	padding-right: 100px;
+	text-decoration:none;
+  transform: translate(-60%, 650%);
+  text-align: center;
+  top: 100%;
+  left: 50%;
+  position: absolute;
+  background-size: 600% 600%;
+  background-position:10% 38%;
+  transition: all 800ms ease-in-out;
+  color: white;
+}
+.github:hover {
+	background: linear-gradient(300deg, #0d1117, #6e5494, #161b22 );
+	background-size: 600% 600%;
+	background-position:100% 63%;
+	box-shadow: -10px 5px 55px 10px rgba(153, 7, 7, 0.589);
+	border-radius:17px 45px 17px 45px;
+	cursor: auto;
+	color: white;
+
+}
+
+
+@media (max-width: 700px) {
+	.Vero, .Instagram,
+	.tiktok, .snap,
+	.pinterest, .github{
+		left: 55%;
+	}
 
 }
 
 
 body {
-	color: rgb(255, 0, 0);
 	background: #111;
 	font-family: sans-serif;
   }
