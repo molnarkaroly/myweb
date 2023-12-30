@@ -1,6 +1,9 @@
 html{
     height: max-content;
 }
+
+
+
 body{
     font-family: "Open Sans";
     background-image: linear-gradient(#00031b,#002b63 );
@@ -72,10 +75,15 @@ body{
 
 #jelszobefull{
     height: 100%;
-    margin-bottom: 14%;
-    
+    margin-bottom: 14%; 
 }
 
+@media (max-width: 600px) {
+	#jelszobefull{
+        height: 100%;
+        margin-bottom: 130%; 
+    }
+}
 
   .inputField1 {
       font-size: larger;
