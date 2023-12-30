@@ -5,15 +5,14 @@ body, html {
 
 
 .buttons {
-	padding-bottom: 7%;
+	padding-bottom: 15%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 600px) {
 	.buttons{
-		padding-bottom: 25%;
+		padding-bottom: 50%;
 	}
 }
-
 
 .bg-image {
   /* The image used */
@@ -250,7 +249,42 @@ body, html {
 	cursor: auto;
 	color: black;
 
+}
 
+.threads {
+	box-shadow: -1px 0px 45px -9px rgba(153, 7, 7, 0.747);
+	background: linear-gradient(300deg, #000, #707070, #000);
+	background-color:#ff0000;
+	border-radius:17px;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:28px;
+	font-weight:bold;
+	padding:14px 83px;
+	padding-left: 88px;
+	padding-right: 88px;
+	text-decoration:none;
+  transform: translate(-60%, 650%);
+  text-align: center;
+  top: 100%;
+  left: 50%;
+  position: absolute;
+  background-size: 600% 600%;
+  background-position:10% 0%;
+  transition: all 800ms ease-in-out;
+  color: white;
+}
+.threads:hover {
+	background: linear-gradient(300deg, #000, #707070, #000);
+	background-size: 600% 600%;
+	background-position:100% 63%;
+	box-shadow: -10px 5px 55px 10px rgba(153, 7, 7, 0.589);
+	border-radius:17px 45px 17px 45px;
+	cursor: auto;
+	color: white;
 
 }
 
@@ -271,7 +305,7 @@ body, html {
 	padding-left: 100px;
 	padding-right: 100px;
 	text-decoration:none;
-  transform: translate(-60%, 650%);
+  transform: translate(-60%, 850%);
   text-align: center;
   top: 100%;
   left: 50%;
@@ -299,7 +333,9 @@ body, html {
 	.pinterest, .github{
 		left: 55%;
 	}
-
+	.threads, .github{
+		left: 55%;
+	}
 }
 
 
