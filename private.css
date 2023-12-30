@@ -1,0 +1,132 @@
+html{
+    height: max-content;
+}
+body{
+    font-family: "Open Sans";
+    background-image: linear-gradient(#00031b,#002b63 );
+    line-height: 1.618em;  
+
+  }
+#jelszobe .container {
+      color: #ffffff;
+      background: inherit;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      padding: 45% 15% 45% 15%;
+      margin-top: auto;
+      border-radius: 25px;
+      border: #ffffff13 solid 1px;    
+      box-shadow: inset 20px 20px 20px 10px rgba(255, 255, 255, 0.089);
+      backdrop-filter: blur(100%);
+      animation: login infinite 5s;
+      background-image: linear-gradient(60deg, #00073f, #0056c7);
+
+}
+
+@keyframes login{
+    0%{box-shadow: inset cyan -4px -5px 15px; }
+    50%{box-shadow:inset cyan 6px 3px 15px;}
+    100%{box-shadow:inset cyan -4px -5px 15px; }
+}
+
+
+#login{
+    font-size: 32px;
+    margin-bottom: 5%;
+}
+
+#password{
+    background-color: #dddddd00;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    color: rgb(0, 132, 255);
+    font-weight: 800;
+    transition: all 300ms ease-in-out;
+    font-size: 24px;
+}
+
+#password:focus{
+    color: rgb(0, 255, 42);
+    outline: none;
+    font-weight: 800;
+
+
+
+}
+
+
+#jelszobe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35%;
+    width: 25%;
+    padding-left: 35%;
+    padding-top: 5%;
+    backdrop-filter: blur(100%);
+    
+
+}
+
+#jelszobefull{
+    height: 100%;
+    margin-bottom: 14%;
+    
+}
+
+
+  .inputField1 {
+      font-size: larger;
+  }
+  .button1 {	
+      border-radius: 12px;
+      width: 90px;
+      font-size: large;
+      margin: 0 auto;
+      margin-top: 15px;
+      transition: all 300ms ease-in-out;
+      animation: button1 infinite 5s;
+      background-color: rgba(0, 255, 255, 0.822);
+      color: #004152;
+      
+    }
+
+  .button1:hover {
+      background-color: rgba(0, 255, 255, 0.5);
+      color: #ffffff;
+      animation: button1_hover infinite 4s;
+
+  }
+  
+  @keyframes button1{
+    0%{box-shadow: cyan -4px -5px 10px; }
+    50%{box-shadow: cyan 5px 3px 15px;}
+    100%{box-shadow: cyan -4px -5px 10px; }
+
+    
+}
+
+  @keyframes button1_hover{
+    0%{box-shadow: cyan -4px -5px 15px; }
+    50%{box-shadow: cyan 5px 3px 20px;}
+    100%{box-shadow: cyan -4px -5px 15px; }
+  }
+ 
+
+#azoldal{
+    display: none;
+    width: 60%;
+    background-color: #dddddd2c;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;		
+    cursor: pointer;
+    border-radius: 16px;
+    margin: 0 auto;
+    text-decoration: none;
+}
+  
+  
+
