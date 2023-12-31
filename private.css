@@ -303,3 +303,38 @@ color: cyan !important;
 border: none !important;
 text-shadow: hsla(180, 100%, 50%, 0.432) 2px 4px !important;
 }
+
+
+.moviedrive tr td{
+    font-weight: bold !important;
+    font-size: 24px !important;
+    color: #C90000 !important;
+
+}
+
+
+.moviedrive button{
+background-color: transparent !important;
+color: red !important;
+border: none !important;
+animation: filmpapa 5s infinite  ease-in-out !important;
+transition: all 800ms ease-in-out ;
+}
+
+@keyframes moviedrive{
+0%{    text-shadow: hsla(0, 100%, 50%, 0.384) 0px 0px ;}
+25%{   text-shadow: hsla(0, 100%, 50%, 0.384) 0px 3px ;}
+50%{   text-shadow: hsla(0, 100%, 50%, 0.384) 5px 5px ;}
+75%{   text-shadow: hsla(0, 100%, 50%, 0.384) 3px 0px ;}
+100%{  text-shadow: hsla(0, 100%, 50%, 0.384) 0px 0px ;}
+
+
+}
+
+.moviedrive button:hover{
+background-color: transparent !important;
+color: red !important;
+border: none !important;
+text-shadow: hsla(0, 100%, 50%, 0.432) 2px 4px !important;
+}
+

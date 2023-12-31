@@ -15,7 +15,9 @@ function onSubmit() {
 
             document.body.style.backgroundImage = "linear-gradient(70deg,#00031b,#002b63,#00031b)";
             document.body.style.overflowY = "scroll" ;
-            document.documentElement.style.height = "max-content";
+            document.documentElement.style.height = "100%";
+            
+            //document.documentElement.style.height = "max-content";
 
             var script = document.createElement('script');
             script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js';
@@ -45,7 +47,7 @@ function onSubmit() {
 
 function filmek() {
      window.filmekp.style.display="block";
-
+     document.documentElement.style.height = "100%";
 
 
 };
