@@ -1,5 +1,6 @@
 html{
-    height: max-content;
+    height: 100%;
+
 }
 
 
@@ -7,9 +8,12 @@ html{
 body{
     font-family: "Open Sans";
     background-image: linear-gradient(#00031b,#002b63 );
-    line-height: 1.618em;  
-
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    height: 100%;
   }
+
+
 #jelszobe .container {
       color: #ffffff;
       background: inherit;
@@ -69,8 +73,6 @@ body{
     outline: none;
     font-weight: 800;
 
-
-
 }
 
 
@@ -87,17 +89,14 @@ body{
 
 }
 
-#jelszobefull{
-    height: 100%;
-    margin-bottom: 14%; 
-}
 
-@media (max-width: 600px) {
+@media (min-width: 1000px) {
 	#jelszobefull{
-        height: 100%;
-        margin-bottom: 130%; 
+        margin-top: 20%;
     }
 }
+
+
 
   .inputField1 {
       font-size: larger;

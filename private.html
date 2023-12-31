@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="private.css">
     <title>Private</title>
     <script  src="./private.js"></script>
+
 </head>
 <body>
     <div id="jelszobefull">
@@ -13,12 +14,14 @@
     <div id="jelszobe">
 
       <div class="container">
+        <form onsubmit="event.preventDefault(); onSubmit();">
           <div>
             <label id="login">Login</label>
             <br>
             <input type="password" name="password" maxlength="999" class="inputField1" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" required/>
           </div>    
           <button class="button1" id="button1" onclick="onSubmit()">Submit</button>
+        </form>
       <script  src="./private.js"></script>
     </div>
 </div>
