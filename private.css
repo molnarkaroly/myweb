@@ -19,18 +19,32 @@ body{
       padding: 45% 15% 45% 15%;
       margin-top: auto;
       border-radius: 25px;
-      border: #ffffff13 solid 1px;    
+      border: #ffffff2d solid 1px;    
       box-shadow: inset 20px 20px 20px 10px rgba(255, 255, 255, 0.089);
       backdrop-filter: blur(100%);
       animation: login infinite 5s;
-      background-image: linear-gradient(60deg, #00073f, #0056c7);
+      background-image: linear-gradient(60deg, #00073f 25%, #0056c7 75%);
+      background-size: 200% 200%;
+
 
 }
 
 @keyframes login{
-    0%{box-shadow: inset cyan -4px -5px 15px; }
-    50%{box-shadow:inset cyan 6px 3px 15px;}
-    100%{box-shadow:inset cyan -4px -5px 15px; }
+    0%{
+        box-shadow: inset cyan -4px -5px 15px; 
+		background-position: 0% 0%;
+
+    }
+    50%{
+        box-shadow:inset cyan 6px 3px 15px;
+        background-position: 0% 25%;
+
+    }
+    100%{
+        box-shadow:inset cyan -4px -5px 15px; 
+        background-position: 0% 0%;
+
+    }
 }
 
 

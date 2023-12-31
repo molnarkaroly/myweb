@@ -1,5 +1,12 @@
 function onSubmit() {
-            var jelszo = "alma";
+            var descript = "";
+            const titkositottSzoveg = "bWljaW1hY2vz";
+            const visszafejtettSzoveg = window.atob(titkositottSzoveg);
+            descript = visszafejtettSzoveg;
+
+            var jelszo = descript;
+
+
             if (document.getElementById('password').value == jelszo) 
             {
             window.azoldal.style.display="block";
@@ -12,6 +19,7 @@ function onSubmit() {
           
            else{ 
                 alert('Hibás jelszó');
+
                 document.getElementById('password').value="";
                 document.getElementById('password').placeholder="Helytelen jelszó";
                 document.getElementById('password').style.color="red";
@@ -21,7 +29,10 @@ function onSubmit() {
 
 
             }
-     }
-    
+};
+
+function onload(){
+
+}    
 
      // https://codepen.io/pailwriter/pen/EebvOG
