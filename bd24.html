@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boldog születésnapot!</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(to bottom, #1a1a2e, #16213e);
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .birthday-text {
+      font-size: 48px;
+      font-weight: bold;
+      color: #FFD700;
+      text-shadow: 0 0 10px rgba(255,215,0,0.5);
+      animation: glow 2s infinite;
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 10px rgba(255,215,0,0.5); }
+      50% { text-shadow: 0 0 20px rgba(255,215,0,0.8), 0 0 30px rgba(255,215,0,0.6); }
+    }
+
+    .goose {
+      width: 300px;
+      height: 300px;
+      margin: 20px auto;
+      filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));
+      position: relative;
+      z-index: 2;
+    }
+
+    .wing {
+      animation: flapWing 1.2s infinite alternate ease-in-out;
+      transform-origin: top left;
+    }
+
+    @keyframes flapWing {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(8deg); }
+    }
+
+    .balloon {
+      position: absolute;
+      width: 40px;
+      height: 50px;
+      opacity: 0;
+    }
+
+    .cake {
+      position: absolute;
+      bottom: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 150px;
+      z-index: 1;
+    }
+
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      opacity: 0;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes confettiFall {
+      0% { 
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+      }
+      100% { 
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .star {
+      position: absolute;
+      opacity: 0;
+    }
+
+    @keyframes twinkle {
+      0% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(0); opacity: 0; }
+    }
+
+    @keyframes floatUp {
+      0% { 
+        transform: translateY(100vh) translateX(0);
+        opacity: 1;
+      }
+      100% { 
+        transform: translateY(-100vh) translateX(var(--x-offset));
+        opacity: 0;
+      }
+    }
+
+    .firework {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    @keyframes explode {
+      0% { transform: scale(0); opacity: 1; }
+      100% { transform: scale(2); opacity: 0; }
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0;
+    }
+
+    @keyframes sparkle {
+      0% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(0); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Torta SVG -->
+    <svg class="cake" viewBox="0 0 200 150">
+      <path d="M40 50 L160 50 L150 120 L50 120 Z" fill="#FFB6C1"/>
+      <path d="M60 50 L140 50 L135 90 L65 90 Z" fill="#FFC0CB"/>
+      <path d="M70 30 L130 30 L140 50 L60 50 Z" fill="#FFD700"/>
+      <circle cx="100" cy="20" r="5" fill="#FF69B4"/>
+      <!-- Gyertyák -->
+      <rect x="80" y="15" width="2" height="15" fill="#FFD700"/>
+      <rect x="100" y="10" width="2" height="20" fill="#FFD700"/>
+      <rect x="120" y="15" width="2" height="15" fill="#FFD700"/>
+      <!-- Lángok -->
+      <circle cx="81" cy="13" r="2" fill="#FF4500"/>
+      <circle cx="101" cy="8" r="2" fill="#FF4500"/>
+      <circle cx="121" cy="13" r="2" fill="#FF4500"/>
+    </svg>
+
+    <svg class="goose" viewBox="0 0 300 300">
+      <!-- Test tollak -->
+      <g class="feathers">
+        <path d="M120 140 C140 130 160 130 180 140" fill="none" stroke="white" stroke-width="2" opacity="0.6"/>
+        <path d="M120 150 C140 140 160 140 180 150" fill="none" stroke="white" stroke-width="2" opacity="0.6"/>
+        <path d="M120 160 C140 150 160 150 180 160" fill="none" stroke="white" stroke-width="2" opacity="0.6"/>
+      </g>
+      
+      <!-- Test -->
+      <ellipse cx="150" cy="150" rx="50" ry="35" fill="white"/>
+      
+      <!-- Nyak részletek -->
+      <path d="M120 150 C110 130 110 110 120 90" fill="white" stroke="white" stroke-width="25"/>
+      <path d="M120 150 C110 130 110 110 120 90" fill="none" stroke="#f0f0f0" stroke-width="2"/>
+      
+      <!-- Szárny (most a testen belül) -->
+      <g class="wing">
+        <path d="M140 130 C150 130 160 140 155 160" fill="white" stroke="#f0f0f0" stroke-width="1"/>
+        <path d="M145 135 C150 135 155 145 152 155" fill="none" stroke="#f0f0f0" stroke-width="1"/>
+      </g>
+      
+      <!-- Fej részletek -->
+      <circle cx="120" cy="85" r="18" fill="white"/>
+      <circle cx="120" cy="85" r="18" fill="none" stroke="#f0f0f0" stroke-width="1"/>
+      
+      <!-- Szem -->
+      <circle cx="115" cy="80" r="3" fill="black"/>
+      <circle cx="114" cy="79" r="1" fill="white"/>
+      
+      <!-- Csőr (kifelé néz) -->
+      <path d="M90 85 L110 82 L110 88 Z" fill="#FFA500" stroke="#FF8C00" stroke-width="0.5" />
+      
+      <!-- Lábak -->
+      <g>
+        <line x1="140" y1="185" x2="140" y2="200" stroke="#FFA500" stroke-width="3"/>
+        <line x1="160" y1="185" x2="160" y2="200" stroke="#FFA500" stroke-width="3"/>
+        <path d="M137 200 L143 200 L140 205 Z" fill="#FFA500"/>
+        <path d="M157 200 L163 200 L160 205 Z" fill="#FFA500"/>
+      </g>
+    </svg>
+
+    <!-- Parti sapka külön (most a liba fölött) -->
+    <svg class="goose" viewBox="0 0 300 300" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+      <g class="party-hat" style="transform-origin: center;">
+        <path d="M110 85 L120 50 L130 85" fill="#FF69B4" stroke="#FF1493" stroke-width="1"/>
+        <rect x="105" y="85" width="30" height="5" fill="#FF69B4" stroke="#FF1493" stroke-width="1"/>
+        <circle cx="120" cy="55" r="3" fill="yellow"/>
+        <path d="M115 70 L125 75" stroke="yellow" stroke-width="1"/>
+        <path d="M125 65 L115 70" stroke="yellow" stroke-width="1"/>
+      </g>
+    </svg>
+    
+    <div class="birthday-text">Boldog Születésnapot! 🎉</div>
+  </div>
+
+  <script>
+
+    function createBalloon() {
+      const balloon = document.createElement('div');
+      balloon.className = 'balloon';
+      const colors = ['#FF69B4', '#87CEEB', '#FFD700', '#98FB98', '#DDA0DD', '#FF6347'];
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      const xOffset = Math.random() * 300 - 150;
+      const duration = 5 + Math.random() * 3;
+      
+      balloon.style.cssText = `
+        background: ${color};
+        border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        --x-offset: ${xOffset}px;
+        left: ${Math.random() * 100}vw;
+        animation: floatUp ${duration}s linear forwards;
+      `;
+      
+      document.querySelector('.container').appendChild(balloon);
+      setTimeout(() => balloon.remove(), duration * 1000);
+    }
+
+    function createFirework() {
+      const firework = document.createElement('div');
+      firework.className = 'firework';
+      const colors = ['#FF69B4', '#87CEEB', '#FFD700', '#98FB98', '#DDA0DD', '#FF6347'];
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      
+      firework.style.cssText = `
+        background: ${color};
+        left: ${Math.random() * 100}vw;
+        top: ${Math.random() * 50}vh;
+        box-shadow: 0 0 10px ${color}, 0 0 20px ${color}, 0 0 30px ${color};
+        animation: explode ${1 + Math.random()}s ease-out forwards;
+      `;
+      
+      document.querySelector('.container').appendChild(firework);
+      
+      // Szikrák hozzáadása a tűzijátékhoz
+      for (let i = 0; i < 30; i++) {
+        createSparkle(firework.style.left, firework.style.top, color);
+      }
+      
+      setTimeout(() => firework.remove(), 1000);
+    }
+
+    function createSparkle(x, y, color) {
+      const sparkle = document.createElement('div');
+      sparkle.className = 'sparkle';
+      const angle = Math.random() * Math.PI * 2;
+      const distance = Math.random() * 100;
+      
+      sparkle.style.cssText = `
+        background: ${color};
+        left: calc(${x} + ${Math.cos(angle) * distance}px);
+        top: calc(${y} + ${Math.sin(angle) * distance}px);
+        animation: sparkle 1s ease-out forwards;
+      `;
+      
+      document.querySelector('.container').appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 1000);
+    }
+
+    function createConfetti() {
+      const confetti = document.createElement('div');
+      confetti.className = 'confetti';
+      const colors = ['#FF69B4', '#87CEEB', '#FFD700', '#98FB98', '#DDA0DD'];
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      const rotation = Math.random() * 360;
+      const duration = 4 + Math.random() * 2;
+      
+      confetti.style.cssText = `
+        background: ${color};
+        left: ${Math.random() * 100}vw;
+        transform: rotate(${rotation}deg);
+        animation: confettiFall ${duration}s linear forwards;
+      `;
+      
+      document.querySelector('.container').appendChild(confetti);
+      setTimeout(() => confetti.remove(), duration * 1000);
+
+
+    }
+
+    function createStar() {
+      const star = document.createElement('div');
+      star.className = 'star';
+      
+      star.style.cssText = `
+        width: ${Math.random() * 3 + 2}px;
+        height: ${Math.random() * 3 + 2}px;
+        background: white;
+        border-radius: 50%;
+        left: ${Math.random() * 100}vw;
+        top: ${Math.random() * 30}vh;
+        animation: twinkle ${1 + Math.random() * 2}s infinite;
+      `;
+      
+      document.querySelector('.container').appendChild(star);
+    }
+
+    // Több csillag létrehozása
+    for (let i = 0; i < 100; i++) {
+      createStar();
+    }
+
+    // Animációk indítása sűrűbben
+    setInterval(createBalloon, 800);  // Több lufi
+    setInterval(createFirework, 400); // Több tűzijáték
+    setInterval(createConfetti, 300); // Konfetti hozzáadása
+
+    // Liba finom mozgása
+    const goose = document.querySelector('.goose');
+    let offset = 0;
+    
+    function animate() {
+      offset += 0.02;
+      const movement = Math.sin(offset) * 8;
+      goose.style.transform = `translateY(${movement}px)`;
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+
+    setTimeout(() => {
+        window.location.href = "https://www.facebook.com";
+      }, 10000);
+
+
+  </script>
+</body>
+</html>
